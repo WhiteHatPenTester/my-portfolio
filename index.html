@@ -120,34 +120,56 @@
     </style>
 </head>
 <body>
-   
+
 
 <style>
-  .badge-container {
+  .main-container {
     display: flex;
-    gap: 20px; /* Space between the badges */
     align-items: flex-start;
-    flex-wrap: wrap; /* Wraps on small screens */
+    gap: 40px;
+    flex-wrap: wrap;
   }
 
-  .badge-container > div,
-  .badge-container > iframe {
-    flex: 0 1 auto; /* Prevents shrinking too small */
+  .left-badge {
+    flex: 0 0 auto;
+  }
+
+  .right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-content h2, .right-content h3 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .right-content iframe {
+    border: none;
+    width: 300px;
+    height: 150px;
   }
 </style>
 
-<h2>💻 Penetration Tester 🔐</h2>
+<div class="main-container">
+  <!-- Left side: Credly Badge -->
+  <div class="left-badge">
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
+  </div>
 
-<div class="badge-container">
-  <!-- Credly Badge -->
-  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
-
-  <!-- TryHackMe Badge -->
-  <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"
-    style="border: none; width: 300px; height: 150px;"></iframe>
+  <!-- Right side: Title, Name, and TryHackMe Badge -->
+  <div class="right-content">
+    <h2>💻 Penetration Tester 🔐</h2>
+    <h3>Your Name Here</h3>
+    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"></iframe>
+  </div>
 </div>
 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
 
 </div>
 
