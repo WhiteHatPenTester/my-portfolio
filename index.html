@@ -16,7 +16,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darnell Miller</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -117,60 +116,70 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Styling for the main content section */
+        .main-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .left-badge {
+            flex: 0 0 auto;
+        }
+
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-content h2, .right-content h3 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .right-content iframe {
+            border: none;
+            width: 300px;
+            height: 150px;
+        }
+
+        /* Resume Section Styling */
+        .resume-item img {
+            margin-bottom: 10px;
+            width: 275px;
+            height: 275px;
+        }
+
+        .resume-item mark {
+            background-color: yellow;
+        }
     </style>
 </head>
+
 <body>
 
+<header>
+    <!-- Background Video, etc. -->
+</header>
 
-<style>
-  .main-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .left-badge {
-    flex: 0 0 auto;
-  }
-
-  .right-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .right-content h2, .right-content h3 {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .right-content iframe {
-    border: none;
-    width: 300px;
-    height: 150px;
-  }
-</style>
-
+<!-- Main content -->
 <div class="main-container">
-  <!-- Left side: Credly Badge -->
-  <div class="left-badge">
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
-  </div>
+    <!-- Left side: Credly Badge -->
+    <div class="left-badge">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
+    </div>
 
-  <!-- Right side: Title, Name, and TryHackMe Badge -->
-  <div class="right-content">
-    <h2>💻 Penetration Tester 🔐</h2>
-    <h3>Darnell Miller</h3>
-    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"></iframe>
-  </div>
-</div>
-
-<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-
+    <!-- Right side: Title, Name, and TryHackMe Badge -->
+    <div class="right-content">
+        <h2>💻 Penetration Tester 🔐</h2>
+        <h3>Darnell Miller</h3>
+        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"></iframe>
+    </div>
 </div>
 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
@@ -183,86 +192,72 @@
         <li><a href="#resume">Resume</a></li>
     </ul>
 </nav>
-                </div>
-            </div>
-        </section>
-    </header>
-<div><h3>Professional Experience</h3>
-            <p><u><b>Certified cybersecurity professional with 20+ years in the technology sector and a focused expertise in manual and automated penetration testing of web applications, infrastructure, and hardware systems.</u></p></b> 
-             <p><u><b>Adept at identifying vulnerabilities, conducting in-depth assessments, and delivering detailed, client-facing reports with technical accuracy and business relevance.</u></p></b>
-<p><u><b>Holds CompTIA Security+, CompTIA PenTest+, and TryHackMe Offensive Security certifications, demonstrating strong foundational knowledge and applied offensive security skills. Proven ability to complete complex technical projects, meet aggressive SLAs, and collaborate effectively across teams. Seeking to bring deep technical insight and a security-first mindset to a dynamic penetration testing or red team role.</u></p></b>
-             </div>
-    
 
-    <section id="videos">
-        <h2>Hands On Penetration Testing Demonstrations</h2>
-        <div class="video-container">
-            <div class="video-item">
-                <h3>Client Side Injection</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ILb0QRJmZlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://youtu.be/ILb0QRJmZlI" class="button-link"><button>Video Link</button></a>
-            </div>
-            <div class="video-item">
-                <h3>Basic SQL Injection Example</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JytDUq8NMBA?si=EFTNuWXtoh9WlkcF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://youtu.be/JytDUq8NMBA" class="button-link"><button>Video Link</button></a>
-            </div>
-            <div class="video-item">
-                <h3>Recon Automation with Python Script</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/oV1UNYD9xwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://youtu.be/oV1UNYD9xwk" class="button-link"><button>Video Link</button></a>
-            </div>
-      <div class="video-item">
-                <h3>Configuring Port Security (Cisco) Explanation Why it is needed in Security.</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o--ksLgBV5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="<iframe width="1268" height="708" src="https://youtu.be/o--ksLgBV5Q?si=PSON14op5wWu-ypZ" class="button-link"><button>Video Link</button></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume">
-        <h2>Certifications & Completed Courses</h2>
-        <div class="resume-item">
-             
-          <img src="IMG/Cert_Learned.png" width='200' height=200" alt="Learning Cert"
-            <br> </br>
-            <br> </br>
-            <img src="IMG/Google Cyber.png" width='200' height=200" alt="Google Cert"
-            <br> </br>
-            <p>CISSP Focused Certificate by Google</p>
-            <br> </br>
-            <p> Try Hack Me<mark> 8 modules</mark>
-<br> Junior Penetration Tester<mark>SQL Injection, Walking Applications, Burp Suite, IDOR, MetaSploit, Linux Privilege Escalation</mark></p> 
-<img src="IMG/Penetration Tester.png" width='275' height=275" alt="Pentest Cert"
-<p>Labs<u><b>Hands On<b></u><u>Kali Linux</u></p>
-            <br> </br>
-            <img src="IMG/IntroCyber.png" width='200' height=200" alt="Intro Cyber Cert"
-            <br> </br>
-        </div>
-        <div class="resume-item">
-<h2>Development</h2>
-        <p>Experience Front End & Back End Developer</p>
-<img src="IMG/Full Stack Developer.png" width='275' height=275" alt="Coding_Cert"
-            <br> </br>
-              <br> </br>
-            <p> Learning Tree International<mark> 32 hour Course</mark>
-<br> Windows Server 2012<mark>Windows Server 2012 Installation & Configuration, Configuring roles and features, Configuring roles and features, Server Core vs. GUI installation, Installing and managing Active Directory Domain Services (AD DS), Setting up Dynamic Host Configuration Protocol (DHCP)</mark></p> 
-<img src="IMG/Server 2012.png" width='275' height=275" alt="Windows 2012 Cert"
-          <br>
-<p>Labs<u><b>Hands On<b></u><u>Windows Server 2012</u></p>
-            <br> </br>
-            </div>
+<!-- Professional Experience Section -->
 <div>
-  <br> </br>
-            <a href="https://www.youtube.com/@PentesterCodingNetworking" class="button-link"><button>Youtube Channel</button></a>
-            <div>
-                <br>
-              <br>
-    <footer>
-        <p>&copy; 2025 Darnell Miller. All rights reserved.</p>
-    </footer>
+    <h3>Professional Experience</h3>
+    <p><u><b>Certified cybersecurity professional with 20+ years in the technology sector and a focused expertise in manual and automated penetration testing of web applications, infrastructure, and hardware systems.</b></u></p>
+    <p><u><b>Adept at identifying vulnerabilities, conducting in-depth assessments, and delivering detailed, client-facing reports with technical accuracy and business relevance.</b></u></p>
+    <p><u><b>Holds CompTIA Security+, CompTIA PenTest+, and TryHackMe Offensive Security certifications, demonstrating strong foundational knowledge and applied offensive security skills. Proven ability to complete complex technical projects, meet aggressive SLAs, and collaborate effectively across teams. Seeking to bring deep technical insight and a security-first mindset to a dynamic penetration testing or red team role.</b></u></p>
 </div>
 
-    <script src="scripts.js"></script>
+<!-- Hands-On Penetration Testing Videos Section -->
+<section id="videos">
+    <h2>Hands On Penetration Testing Demonstrations</h2>
+    <div class="video-container">
+        <div class="video-item">
+            <h3>Client Side Injection</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ILb0QRJmZlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="https://youtu.be/ILb0QRJmZlI" class="button-link"><button>Video Link</button></a>
+        </div>
+        <div class="video-item">
+            <h3>Basic SQL Injection Example</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JytDUq8NMBA?si=EFTNuWXtoh9WlkcF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="https://youtu.be/JytDUq8NMBA" class="button-link"><button>Video Link</button></a>
+        </div>
+        <div class="video-item">
+            <h3>Recon Automation with Python Script</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oV1UNYD9xwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="https://youtu.be/oV1UNYD9xwk" class="button-link"><button>Video Link</button></a>
+        </div>
+        <div class="video-item">
+            <h3>Configuring Port Security (Cisco) Explanation Why it is needed in Security</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o--ksLgBV5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="https://youtu.be/o--ksLgBV5Q" class="button-link"><button>Video Link</button></a>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications and Courses Section -->
+<section id="resume">
+    <h2>Certifications & Completed Courses</h2>
+    <div class="resume-item">
+        <img src="IMG/Cert_Learned.png" alt="Learning Cert">
+        <p>CISSP Focused Certificate by Google</p>
+        <p>TryHackMe <mark>8 modules</mark></p>
+        <p>Junior Penetration Tester <mark>SQL Injection, Burp Suite, MetaSploit, Linux Privilege Escalation</mark></p>
+    </div>
+    <div class="resume-item">
+        <h2>Development</h2>
+        <p>Experience Front End & Back End Developer</p>
+        <img src="IMG/Full Stack Developer.png" alt="Coding Cert">
+        <p>Learning Tree International <mark>32 hour Course</mark></p>
+        <p>Windows Server 2012 <mark>Installation & Configuration, Configuring roles, DHCP, etc.</mark></p>
+        <img src="IMG/Server 2012.png" alt="Windows Server 2012 Cert">
+    </div>
+</section>
+
+<!-- Youtube Channel -->
+<div>
+    <a href="https://www.youtube.com/@PentesterCodingNetworking" class="button-link"><button>Youtube Channel</button></a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Darnell Miller. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+
 </body>
 </html>
