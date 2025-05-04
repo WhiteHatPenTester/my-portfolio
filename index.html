@@ -1,123 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--
-
-  _____                _             _   _               _______        _            
- |  __ \              | |           | | (_)             |__   __|      | |           
- | |__) |__ _ __   ___| |_ _ __ __ _| |_ _  ___  _ __      | | ___  ___| |_ ___ _ __ 
- |  ___/ _ \ '_ \ / _ \ __| '__/ _` | __| |/ _ \| '_ \     | |/ _ \/ __| __/ _ \ '__|
- | |  |  __/ | | |  __/ |_| | | (_| | |_| | (_) | | | |    | |  __/\__ \ ||  __/ |   
- |_|   \___|_| |_|\___|\__|_|  \__,_|\__|_|\___/|_| |_|    |_|\___||___/\__\___|_|   
-                                                                                     
-                                                                                     
-                                                                                                                                                                                                        $$$$$$/  
- -->                                                                                                                     
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darnell Miller</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333333;
-            background: url('IMG/background.jpg') no-repeat center center fixed;
-            background-size: cover;
+        * {
+            box-sizing: border-box;
         }
 
-        header {
+        body {
+            background: #2C3940;
+            font-family: 'Fira Sans', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 40px 0 5px;
+        }
+
+        h2 {
+            font-weight: 100;
+            color: #00C4FF;
+            font-size: 14px;
+            margin: 0 0 20px;
+        }
+
+        a {
+            color: white;
+            font-size: 10px;
+            opacity: 0.6;
+            text-decoration: none;
+            font-weight: 100;
+            transition: opacity 0.3s;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        /* Fizzy Button Styles */
+        .fizzy-button {
             position: relative;
-            height: 200px; /* Adjust height as needed */
+            display: inline-block;
+            padding: 14px 28px;
+            border: 2px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 300;
             overflow: hidden;
         }
 
-        header #bg-video {
+        .fizzy-button:hover {
+            background: white;
+            color: #2C3940;
+        }
+
+        .fizzy-button:hover .particle {
+            animation: explode 0.6s forwards;
+        }
+
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
+            font-size: 18px;
+            color: #00C4FF;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .fizzy-button:hover .icon {
+            opacity: 1;
+        }
+
+        .particles {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-            z-index: -1;
+            width: 0;
+            height: 0;
+            pointer-events: none;
         }
 
-        .video-overlay {
+        .particle {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay */
-            color: white;
-            text-align: center;
+            width: 6px;
+            height: 6px;
+            background: hsla(200, 100%, 60%, 0.8);
+            border-radius: 50%;
+            opacity: 0;
         }
 
-        .video-overlay h1 {
-            margin: 0;
-            padding: 70px 0 0; /* Adjust padding as needed */
-            font-size: 2.5em;
+        @keyframes explode {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--dx), var(--dy)) scale(0.5);
+            }
         }
 
-        .video-overlay nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-
-        .video-overlay nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .video-overlay nav ul li a {
-            color: white;
-            text-decoration: none;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to links */
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Added transparency */
-            border-radius: 8px;
-        }
-
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .video-item {
-            flex: 1 1 calc(50% - 20px);
-            margin-bottom: 20px;
-        }
-
-        .button-link {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: rgba(0, 123, 255, 0.8); /* Added transparency */
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Styling for the main content section */
+        /* Additional Styles for Page */
         .main-container {
             display: flex;
             align-items: flex-start;
@@ -148,15 +144,14 @@
             height: 150px;
         }
 
-        /* Resume Section Styling */
-        .resume-item img {
-            margin-bottom: 10px;
-            width: 275px;
-            height: 275px;
-        }
-
-        .resume-item mark {
-            background-color: yellow;
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -164,7 +159,7 @@
 <body>
 
 <header>
-    <!-- Background Video, etc. -->
+    <!-- Background Video and Overlay -->
 </header>
 
 <!-- Main content -->
@@ -193,12 +188,23 @@
     </ul>
 </nav>
 
+<!-- Buttons Section -->
+<div class="fizzy-button" onclick="explodeParticles(this)">
+    <i class="icon ion-log-in"></i> Portfolio
+    <div class="particles">
+        <div class="particle" style="--dx: -30px; --dy: -20px;"></div>
+        <div class="particle" style="--dx: 25px; --dy: -15px;"></div>
+        <div class="particle" style="--dx: -20px; --dy: 30px;"></div>
+        <div class="particle" style="--dx: 15px; --dy: 35px;"></div>
+        <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
+        <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
+    </div>
+</div>
+
 <!-- Professional Experience Section -->
 <div>
     <h3>Professional Experience</h3>
     <p><u><b>Certified cybersecurity professional with 20+ years in the technology sector and a focused expertise in manual and automated penetration testing of web applications, infrastructure, and hardware systems.</b></u></p>
-    <p><u><b>Adept at identifying vulnerabilities, conducting in-depth assessments, and delivering detailed, client-facing reports with technical accuracy and business relevance.</b></u></p>
-    <p><u><b>Holds CompTIA Security+, CompTIA PenTest+, and TryHackMe Offensive Security certifications, demonstrating strong foundational knowledge and applied offensive security skills. Proven ability to complete complex technical projects, meet aggressive SLAs, and collaborate effectively across teams. Seeking to bring deep technical insight and a security-first mindset to a dynamic penetration testing or red team role.</b></u></p>
 </div>
 
 <!-- Hands-On Penetration Testing Videos Section -->
@@ -208,56 +214,31 @@
         <div class="video-item">
             <h3>Client Side Injection</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ILb0QRJmZlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://youtu.be/ILb0QRJmZlI" class="button-link"><button>Video Link</button></a>
+            <a href="https://youtu.be/ILb0QRJmZlI" class="fizzy-button"><button>Video Link</button></a>
         </div>
         <div class="video-item">
             <h3>Basic SQL Injection Example</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/JytDUq8NMBA?si=EFTNuWXtoh9WlkcF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://youtu.be/JytDUq8NMBA" class="button-link"><button>Video Link</button></a>
-        </div>
-        <div class="video-item">
-            <h3>Recon Automation with Python Script</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oV1UNYD9xwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://youtu.be/oV1UNYD9xwk" class="button-link"><button>Video Link</button></a>
-        </div>
-        <div class="video-item">
-            <h3>Configuring Port Security (Cisco) Explanation Why it is needed in Security</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/o--ksLgBV5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://youtu.be/o--ksLgBV5Q" class="button-link"><button>Video Link</button></a>
+            <a href="https://youtu.be/JytDUq8NMBA" class="fizzy-button"><button>Video Link</button></a>
         </div>
     </div>
 </section>
-
-<!-- Certifications and Courses Section -->
-<section id="resume">
-    <h2>Certifications & Completed Courses</h2>
-    <div class="resume-item">
-        <img src="IMG/Cert_Learned.png" alt="Learning Cert">
-        <p>CISSP Focused Certificate by Google</p>
-        <p>TryHackMe <mark>8 modules</mark></p>
-        <p>Junior Penetration Tester <mark>SQL Injection, Burp Suite, MetaSploit, Linux Privilege Escalation</mark></p>
-    </div>
-    <div class="resume-item">
-        <h2>Development</h2>
-        <p>Experience Front End & Back End Developer</p>
-        <img src="IMG/Full Stack Developer.png" alt="Coding Cert">
-        <p>Learning Tree International <mark>32 hour Course</mark></p>
-        <p>Windows Server 2012 <mark>Installation & Configuration, Configuring roles, DHCP, etc.</mark></p>
-        <img src="IMG/Server 2012.png" alt="Windows Server 2012 Cert">
-    </div>
-</section>
-
-<!-- Youtube Channel -->
-<div>
-    <a href="https://www.youtube.com/@PentesterCodingNetworking" class="button-link"><button>Youtube Channel</button></a>
-</div>
 
 <!-- Footer -->
 <footer>
     <p>&copy; 2025 Darnell Miller. All rights reserved.</p>
 </footer>
 
-<script src="scripts.js"></script>
+<script>
+    function explodeParticles(button) {
+        const particles = button.querySelectorAll('.particle');
+        particles.forEach(p => {
+            p.style.animation = 'none'; // Reset animation
+            p.offsetHeight; // Trigger reflow
+            p.style.animation = 'explode 0.6s forwards';
+        });
+    }
+</script>
 
 </body>
 </html>
