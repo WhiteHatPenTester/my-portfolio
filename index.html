@@ -20,6 +20,25 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <style>
+          /* Basic styles for the body */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        /* Custom ball cursor style */
+        .cursor {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            pointer-events: none;
+            transition: transform 0.1s ease;
+            z-index: 1000;
+        }
         * {
             box-sizing: border-box;
         }
