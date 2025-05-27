@@ -255,7 +255,20 @@
         });
     }
 </script>
+<div class="cursor" id="cursor"></div>
+    <script>
+        // Create the custom cursor
+        const cursor = document.getElementById('cursor');
 
+        // Move the cursor with the mouse
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            cursor.style.left = `${mouseX - cursor.offsetWidth / 2}px`;
+            cursor.style.top = `${mouseY - cursor.offsetHeight / 2}px`;
+        });
+    </script>
 </body>
 </html>
 ``
