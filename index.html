@@ -42,6 +42,31 @@
         * {
             box-sizing: border-box;
         }
+          .main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.left-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.left-badge iframe {
+    border: none;
+    width: 300px;
+    height: 150px;
+}
+
+.right-content {
+    flex: 1;
+}
 
         body {
             background: #2C3940;
@@ -214,14 +239,13 @@
 
 <!-- Main content -->
 <div class="main-container">
-    <!-- Left side: TryHackMe + Credly (ISC2) Badges -->
+    <!-- Left side: TryHackMe (on top) + Credly badge (underneath) -->
     <div class="left-badge">
-        <!-- TryHackMe Badge (on top) -->
+        <!-- TryHackMe Badge -->
         <iframe 
             src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556" 
             width="300" 
-            height="150" 
-            style="border: none; margin-bottom: 20px;">
+            height="150">
         </iframe>
 
         <!-- Credly ISC2 Badge -->
@@ -233,14 +257,12 @@
         </div>
     </div>
 
-    <!-- Right side (optional, leave empty or use for future content) -->
-    <div class="right-content">
-        <!-- You can add something here later -->
-    </div>
+    <!-- Optional right content -->
+    <div class="right-content"></div>
 </div>
 
+<!-- Credly badge script -->
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
 
 <div class="button-container">
 
