@@ -99,9 +99,16 @@
             color: #2C3940;
         }
 
-        .fizzy-button:hover .particle {
-            animation: explode 0.6s forwards;
-        }
+        .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: hsla(200, 100%, 60%, 0.8);
+    border-radius: 50%;
+    opacity: 1; /* Make it visible for animation to be seen */
+    transform: translate(0, 0) scale(1);
+}
+
 
         .icon {
             margin-right: 8px;
