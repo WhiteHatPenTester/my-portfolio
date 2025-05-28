@@ -315,14 +315,19 @@
 </footer>
 
 <script>
-    function explodeParticles(button) {
-        const particles = button.querySelectorAll('.particle');
-        particles.forEach(p => {
-            p.style.animation = 'none'; // Reset animation
-            p.offsetHeight; // Trigger reflow
-            p.style.animation = 'explode 0.6s forwards';
-        });
-    }
+   function explodeParticles(button) {
+    const particles = button.querySelectorAll('.particle');
+    particles.forEach(p => {
+        p.style.animation = 'none';
+        p.style.opacity = '1';
+        p.offsetHeight;
+        p.style.animation = 'explode 0.6s forwards';
+
+        p.addEventListener('animationend', () => {
+            p.style.opacity = '0'; // Hide after animating
+        }, { once: true });
+    });
+}
 </script>
 <div class="cursor" id="cursor"></div>
     <script>
