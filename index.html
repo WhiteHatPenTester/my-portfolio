@@ -214,22 +214,29 @@
 
 <!-- Main content -->
 <div class="main-container">
-    <!-- Left side: Credly Badge -->
+    <!-- Left side: Credly + ISC2 badges -->
     <div class="left-badge">
-        <!-- Credly Badge Embed Code -->
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
+        <!-- Credly badge via JavaScript -->
+        <div 
+            data-iframe-width="150" 
+            data-iframe-height="270" 
+            data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" 
+            data-share-badge-host="https://www.credly.com">
+        </div>
+
+        <!-- ISC2 badge (image or iframe, depending on what they provide) -->
+        <img src="/path-to-your/isc2-candidate-badge.png" alt="ISC2 Candidate Badge" class="isc2-badge">
     </div>
 
-    <!-- Right side: Title, Name, and TryHackMe Badge -->
+    <!-- Right side: TryHackMe badge -->
     <div class="right-content">
-        
-        
-        <!-- TryHackMe Badge Embed Code -->
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556" width="300" height="150"></iframe>
+        <iframe 
+            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556" 
+            width="300" 
+            height="150">
+        </iframe>
     </div>
 </div>
-
-<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 
 <div class="button-container">
