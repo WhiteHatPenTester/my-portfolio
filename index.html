@@ -363,4 +363,32 @@
         <div class="video-item">
           <h3>Client Side Injection</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/
-```
+
+<script>
+  // Create the cursor element
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor');
+  document.body.appendChild(cursor);
+
+  // Track mouse movement
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Update the position of the cursor
+    cursor.style.left = `${mouseX - cursor.offsetWidth / 2}px`;
+    cursor.style.top = `${mouseY - cursor.offsetHeight / 2}px`;
+  });
+
+  // Add hover effect to buttons (optional)
+  const buttons = document.querySelectorAll('.fizzy-button');
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'scale(1.5)'; // Enlarge the cursor when hovering over buttons
+    });
+    button.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'scale(1)'; // Reset cursor size when not hovering
+    });
+  });
+</script>
+
