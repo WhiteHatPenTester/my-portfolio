@@ -9,16 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet"/>
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
   <style>
-  .cert-grid {
-  /* REMOVE this line: */
-  /* position: absolute; */
-  
-  /* Add this instead: */
-  margin: 40px auto;
-  max-width: 800px;
-
+   .cert-grid {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Set to 3 columns */
   gap: 15px;
   z-index: 1;
   padding: 20px;
