@@ -9,6 +9,31 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet"/>
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
   <style>
+    .cert-grid {
+  position: absolute;
+  top: 140px; /* Adjust as needed to place below buttons */
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(44, 57, 64, 0.8); /* semi-transparent bg to pop above video */
+  border-radius: 10px;
+}
+
+.cert-grid img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.cert-grid img:hover {
+  transform: scale(1.05);
+}
     .nav-wrapper {
   margin-top: 20px;
   text-align: center;
@@ -381,6 +406,19 @@ header {
       </div>
     </div>
   </div>
+  <!-- Certification Grid -->
+<div class="cert-grid">
+  <img src="/my-portfolio/IMG/Google Cyber.png" alt="Certification 1" />
+  <img src="/my-portfolio/IMG/CC cert.png" alt="Certification 2" />
+  <img src="/my-portfolio/IMG/Pentest.png" alt="Certification 3" />
+  <img src="/my-portfolio/IMG/security+.png" alt="Certification 4" />
+  <img src="/my-portfolio/IMG/Penetration Tester.png" alt="Certification 5" />
+  <img src="/my-portfolio/IMG/IntroCyber.png" alt="Certification 6" />
+  <img src="/my-portfolio/IMG/Server 2012.png" alt="Certification 7" />
+  <img src="/my-portfolio/IMG/Cert_Learned.png" alt="Certification 8" />
+  <img src="/my-portfolio/IMG/Full Stack Developer.png" alt="Certification 9" />
+</div>
+
 </header>
 <div
   <div class="nav-wrapper">
