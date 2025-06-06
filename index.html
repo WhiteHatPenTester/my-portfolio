@@ -9,6 +9,62 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet"/>
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
   <style>
+    .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  gap: 30px;
+}
+
+.tryhackme-badge {
+  flex-shrink: 0;
+}
+
+.cert-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(44, 57, 64, 0.8);
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.cert-row img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.cert-row img:hover {
+  transform: scale(1.05);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.credly-badge {
+  flex-shrink: 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
    .cert-grid {
   position: absolute;
   top: 140px;
@@ -333,92 +389,62 @@ header {
     <source src="/my-portfolio/IMG/clouds.mp4" type="video/mp4">
   </video>
 
-  <!-- Left: TryHackMe Badge -->
-  <div class="left-badge">
-    <iframe 
-      src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"
-      width="350" 
-      height="150" 
-      frameborder="0" 
-      style="background-color: transparent; border: none;"
-    ></iframe>
-  </div>
-
-  <!-- Right: Credly Badge -->
-  <div class="badge2">
-    <div 
-      data-iframe-width="150" 
-      data-iframe-height="270" 
-      data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" 
-      data-share-badge-host="https://www.credly.com"
-    ></div>
-  </div>
-
-  <!-- Buttons -->
-  <div class="button-container">
-    <div class="fizzy-button">
-      <i class="icon ion-log-in"></i> Portfolio
-      <div class="particles">
-        <div class="particle" style="--dx: -30px; --dy: -20px;"></div>
-        <div class="particle" style="--dx: 25px; --dy: -15px;"></div>
-        <div class="particle" style="--dx: -20px; --dy: 30px;"></div>
-        <div class="particle" style="--dx: 15px; --dy: 35px;"></div>
-        <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
-        <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
-      </div>
+  <!-- Top Bar Layout (badges + buttons) -->
+  <div class="top-bar">
+    <!-- Left: TryHackMe Badge -->
+    <div class="tryhackme-badge">
+      <iframe 
+        src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"
+        width="350" 
+        height="150" 
+        frameborder="0" 
+        style="background-color: transparent; border: none;"
+      ></iframe>
     </div>
 
-    <div class="fizzy-button">
-      <i class="icon ion-log-in"></i> Contact Me
-      <div class="particles">
-        <div class="particle" style="--dx: -25px; --dy: -25px;"></div>
-        <div class="particle" style="--dx: 30px; --dy: -10px;"></div>
-        <div class="particle" style="--dx: -10px; --dy: 20px;"></div>
-        <div class="particle" style="--dx: 20px; --dy: 30px;"></div>
-        <div class="particle" style="--dx: 35px; --dy: -15px;"></div>
-        <div class="particle" style="--dx: -30px; --dy: 10px;"></div>
-      </div>
+    <!-- Middle: Your cert-grid (badges) -->
+    <div class="cert-row">
+      <img src="/my-portfolio/IMG/Google Cyber.png" alt="Certification 1" />
+      <img src="/my-portfolio/IMG/CC cert.png" alt="Certification 2" />
+      <img src="/my-portfolio/IMG/Pentest.png" alt="Certification 3" />
+      <img src="/my-portfolio/IMG/security+.png" alt="Certification 4" />
+      <img src="/my-portfolio/IMG/Penetration Tester.png" alt="Certification 5" />
     </div>
 
-    <div class="fizzy-button">
-      <i class="icon ion-log-in"></i> Certifications
-      <div class="particles">
-        <div class="particle" style="--dx: -35px; --dy: -30px;"></div>
-        <div class="particle" style="--dx: 40px; --dy: -20px;"></div>
-        <div class="particle" style="--dx: -15px; --dy: 25px;"></div>
-        <div class="particle" style="--dx: 25px; --dy: 35px;"></div>
-        <div class="particle" style="--dx: 50px; --dy: -5px;"></div>
-        <div class="particle" style="--dx: -40px; --dy: 15px;"></div>
+    <!-- Right: ISC2 Badge and Buttons -->
+    <div class="right-side">
+      <div class="credly-badge">
+        <div 
+          data-iframe-width="150" 
+          data-iframe-height="270" 
+          data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" 
+          data-share-badge-host="https://www.credly.com"
+        ></div>
       </div>
-    </div>
 
-    <div class="fizzy-button">
-      <i class="icon ion-log-in"></i> Resume
-      <div class="particles">
-        <div class="particle" style="--dx: -30px; --dy: -40px;"></div>
-        <div class="particle" style="--dx: 30px; --dy: -25px;"></div>
-        <div class="particle" style="--dx: -20px; --dy: 15px;"></div>
-        <div class="particle" style="--dx: 20px; --dy: 25px;"></div>
-        <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
-        <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
+      <div class="button-container">
+        <!-- Fizzy Buttons -->
+        <div class="fizzy-button">
+          <i class="icon ion-log-in"></i> Portfolio
+          <div class="particles"></div>
+        </div>
+        <div class="fizzy-button">
+          <i class="icon ion-log-in"></i> Contact Me
+          <div class="particles"></div>
+        </div>
+        <div class="fizzy-button">
+          <i class="icon ion-log-in"></i> Certifications
+          <div class="particles"></div>
+        </div>
+        <div class="fizzy-button">
+          <i class="icon ion-log-in"></i> Resume
+          <div class="particles"></div>
+        </div>
       </div>
     </div>
   </div>
 
-
-  <!-- Certification Grid UNDER nav bar -->
-  <div class="cert-grid">
-    <img src="/my-portfolio/IMG/Google Cyber.png" alt="Certification 1" />
-    <img src="/my-portfolio/IMG/CC cert.png" alt="Certification 2" />
-    <img src="/my-portfolio/IMG/Pentest.png" alt="Certification 3" />
-    <img src="/my-portfolio/IMG/security+.png" alt="Certification 4" />
-    <img src="/my-portfolio/IMG/Penetration Tester.png" alt="Certification 5" />
-    <img src="/my-portfolio/IMG/IntroCyber.png" alt="Certification 6" />
-    <img src="/my-portfolio/IMG/Server 2012.png" alt="Certification 7" />
-    <img src="/my-portfolio/IMG/Cert_Learned.png" alt="Certification 8" />
-    <img src="/my-portfolio/IMG/Full Stack Developer.png" alt="Certification 9" />
-  </div>
-   <!-- Nav bar UNDER fizzy buttons -->
+  <!-- Nav Bar -->
   <div class="nav-wrapper">
     <nav>
       <a href="index.html"><img src="IMG/advancewebb.png" alt="Home"></a>
@@ -432,6 +458,7 @@ header {
     </nav>
   </div>
 </header>
+
 
 
 
