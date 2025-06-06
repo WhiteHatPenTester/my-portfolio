@@ -16,16 +16,20 @@
       padding: 20px;
       background-color: #333;
     }
-
     nav a img {
-      height: 60px; /* Adjust to match your design */
-      width: auto;
-      transition: transform 0.3s ease;
-    }
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border-radius: 6px;         /* Rounded corners for button feel */
+  background-color: #444;     /* Optional: dark background to look like a button */
+  padding: 4px;               /* Optional: spacing inside button */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
-    nav a img:hover {
-      transform: scale(1.1); /* Zoom on hover */
-    }
+nav a img:hover {
+  transform: scale(1.05);     /* Slight zoom effect */
+  background-color: #555;     /* Slightly lighter on hover */
+}
     .badge2 {
       position: absolute;
       top: 20px;
