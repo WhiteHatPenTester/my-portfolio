@@ -316,77 +316,91 @@ header {
   <video autoplay muted loop playsinline class="header-video">
     <source src="/my-portfolio/IMG/clouds.mp4" type="video/mp4">
   </video>
-  <!-- Optional dim overlay -->
+  <!-- Dim overlay -->
   <div class="video-overlay"></div>
 
   <!-- Foreground content -->
- <div class="main-container">
-  <div class="left-badge">
-    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"></iframe>
+  <div class="foreground-content">
+    <div class="main-container">
+      <!-- Left: Badges -->
+      <div class="left-badge">
+        <!-- TryHackMe Badge -->
+        <iframe 
+          src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=441556"
+          width="300" 
+          height="150" 
+          frameborder="0" 
+          style="background-color: transparent; border: none;"
+        ></iframe>
 
-    <div class="credly-badge-wrapper">
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" data-share-badge-host="https://www.credly.com"></div>
+        <!-- Credly Badge -->
+        <div class="credly-badge-wrapper">
+          <div 
+            data-iframe-width="150" 
+            data-iframe-height="270" 
+            data-share-badge-id="152d2c65-3a28-4283-b369-176a95f9d3d5" 
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Right (you can add content here later) -->
+      <div class="right-content"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <div class="fizzy-button">
+        <i class="icon ion-log-in"></i> Portfolio
+        <div class="particles">
+          <div class="particle" style="--dx: -30px; --dy: -20px;"></div>
+          <div class="particle" style="--dx: 25px; --dy: -15px;"></div>
+          <div class="particle" style="--dx: -20px; --dy: 30px;"></div>
+          <div class="particle" style="--dx: 15px; --dy: 35px;"></div>
+          <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
+          <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
+        </div>
+      </div>
+
+      <div class="fizzy-button">
+        <i class="icon ion-log-in"></i> Contact Me
+        <div class="particles">
+          <div class="particle" style="--dx: -25px; --dy: -25px;"></div>
+          <div class="particle" style="--dx: 30px; --dy: -10px;"></div>
+          <div class="particle" style="--dx: -10px; --dy: 20px;"></div>
+          <div class="particle" style="--dx: 20px; --dy: 30px;"></div>
+          <div class="particle" style="--dx: 35px; --dy: -15px;"></div>
+          <div class="particle" style="--dx: -30px; --dy: 10px;"></div>
+        </div>
+      </div>
+
+      <div class="fizzy-button">
+        <i class="icon ion-log-in"></i> Certifications
+        <div class="particles">
+          <div class="particle" style="--dx: -35px; --dy: -30px;"></div>
+          <div class="particle" style="--dx: 40px; --dy: -20px;"></div>
+          <div class="particle" style="--dx: -15px; --dy: 25px;"></div>
+          <div class="particle" style="--dx: 25px; --dy: 35px;"></div>
+          <div class="particle" style="--dx: 50px; --dy: -5px;"></div>
+          <div class="particle" style="--dx: -40px; --dy: 15px;"></div>
+        </div>
+      </div>
+
+      <div class="fizzy-button">
+        <i class="icon ion-log-in"></i> Resume
+        <div class="particles">
+          <div class="particle" style="--dx: -30px; --dy: -40px;"></div>
+          <div class="particle" style="--dx: 30px; --dy: -25px;"></div>
+          <div class="particle" style="--dx: -20px; --dy: 15px;"></div>
+          <div class="particle" style="--dx: 20px; --dy: 25px;"></div>
+          <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
+          <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
+        </div>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="right-content">
-    <!-- Your right side content goes here -->
-  </div>
-</div>
-
-   <div class="button-container">
-  <!-- Portfolio Button -->
-  <div class="fizzy-button">
-    <i class="icon ion-log-in"></i> Portfolio
-    <div class="particles">
-      <div class="particle" style="--dx: -30px; --dy: -20px;"></div>
-      <div class="particle" style="--dx: 25px; --dy: -15px;"></div>
-      <div class="particle" style="--dx: -20px; --dy: 30px;"></div>
-      <div class="particle" style="--dx: 15px; --dy: 35px;"></div>
-      <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
-      <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
-    </div>
-  </div>
-
-  <!-- Contact Me Button -->
-  <div class="fizzy-button">
-    <i class="icon ion-log-in"></i> Contact Me
-    <div class="particles">
-      <div class="particle" style="--dx: -25px; --dy: -25px;"></div>
-      <div class="particle" style="--dx: 30px; --dy: -10px;"></div>
-      <div class="particle" style="--dx: -10px; --dy: 20px;"></div>
-      <div class="particle" style="--dx: 20px; --dy: 30px;"></div>
-      <div class="particle" style="--dx: 35px; --dy: -15px;"></div>
-      <div class="particle" style="--dx: -30px; --dy: 10px;"></div>
-    </div>
-  </div>
-
-  <!-- Certifications Button -->
-  <div class="fizzy-button">
-    <i class="icon ion-log-in"></i> Certifications
-    <div class="particles">
-      <div class="particle" style="--dx: -35px; --dy: -30px;"></div>
-      <div class="particle" style="--dx: 40px; --dy: -20px;"></div>
-      <div class="particle" style="--dx: -15px; --dy: 25px;"></div>
-      <div class="particle" style="--dx: 25px; --dy: 35px;"></div>
-      <div class="particle" style="--dx: 50px; --dy: -5px;"></div>
-      <div class="particle" style="--dx: -40px; --dy: 15px;"></div>
-    </div>
-  </div>
-
-  <!-- Resume Button -->
-  <div class="fizzy-button">
-    <i class="icon ion-log-in"></i> Resume
-    <div class="particles">
-      <div class="particle" style="--dx: -30px; --dy: -40px;"></div>
-      <div class="particle" style="--dx: 30px; --dy: -25px;"></div>
-      <div class="particle" style="--dx: -20px; --dy: 15px;"></div>
-      <div class="particle" style="--dx: 20px; --dy: 25px;"></div>
-      <div class="particle" style="--dx: 40px; --dy: -10px;"></div>
-      <div class="particle" style="--dx: -35px; --dy: 5px;"></div>
-    </div>
-  </div>
-</div>
 
 
     <div>
