@@ -30,6 +30,33 @@ _/ ____\____ |  | |  |   ______  _  __ _/  |_|  |__   ____   __  _  _|  |__ |__|
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic" rel="stylesheet"/>
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
   <style>
+     .nav-wrapper {
+    width: 100%;
+    overflow: hidden; /* This hides the images as they move off-screen */
+  }
+
+  nav {
+    display: flex;
+    animation: marquee 15s linear infinite;
+  }
+
+  nav a {
+    margin-right: 30px; /* Adds spacing between images */
+  }
+
+  nav img {
+    max-width: 100px; /* Adjust image size */
+    max-height: 50px; /* Adjust image size */
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End on the left */
+    }
+  }
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
